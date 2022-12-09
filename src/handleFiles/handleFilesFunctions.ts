@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-
 const handleFilesPath = async () : Promise<string[]> => {
 
 	if (!fs.existsSync(path.join('./src', 'files'))){
