@@ -12,6 +12,7 @@ const router = showExpressRouter.Router();
 router.get('/', async (req : typeof Request , res: typeof Response) => {
 	
 	var data : string[] = await handleFiles()
+	console.log(entrei)
 	res.json({filesName: data})
 
 })
