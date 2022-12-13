@@ -12,5 +12,7 @@ ENV PORT=8000
 
 EXPOSE 8000
 
-CMD npm run start:dev
+CMD sudo chown -R 1000:1000 "/root/.npm
+
+CMD npx nodemon
 
