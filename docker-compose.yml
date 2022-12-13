@@ -1,0 +1,16 @@
+services:
+  filewebserverbackend:
+    build: 
+      "./server"
+    ports:
+      - "8000:8000"
+    volumes:
+       - ./server/serverdata:/etc/serverdata
+  
+  filewebserverfrontend:
+    build:
+      "./client"
+    ports:
+      - "5173:5173"
+    depends_on:
+      - filewebserverbackend

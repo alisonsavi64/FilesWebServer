@@ -3,8 +3,12 @@ const express = require('express');
 const app = express();
 const masterPath = require('path');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 
 app.use(cors({ origin: '*' }));
+
+app.use(bodyParser.urlencoded({	extended: true }));
+app.use(bodyParser.json());
 
 const ShowFilesRoute = require('./controllers/showFilesToDownload');
 
